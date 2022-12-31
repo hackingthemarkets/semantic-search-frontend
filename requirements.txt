@@ -1,0 +1,7 @@
+flask
+openai
+pandas
+matplotlib
+plotly
+scipy
+scikit-learn

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+  </head>
+  <body>
+    <img id="logo" src="/static/images/logo.png" alt="A description of the image">
+
+    <form action="/search" method="GET">
+      <input type="text" id="query" name="query" value="{{ query }}">
+      <input type="submit" value="search">
+    </form> 
+    <div id="results">
+    <h1>Search Results</h1>
+    {% if results %}
+      <ul>
+        {% for result in results %}
+          <li>"{{ result }}"</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No results found.</p>
+    {% endif %}
+    </div>
+  </body>
+</html>
